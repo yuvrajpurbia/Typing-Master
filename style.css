@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); /* Importing the 'Poppins' font from Google Fonts */
+
+/* Universal selector to reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif; /* Setting the font family */
+}
+
+body {
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+    display: flex; /* Using flexbox for centering */
+    padding: 0 10px;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background-image: url('bg2.jpeg'); /* Background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-size: cover; /* Ensure background image covers the entire area */
+    background-position: center center; /* Center the background image */
+    backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+}
+
+.wrapper {
+    width: 770px; /* Set the width of the wrapper */
+    padding: 35px; /* Padding inside the wrapper */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Box shadow for a 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and box-shadow */
+}
+
+.wrapper:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+}
+
+.wrapper .content-box {
+    padding: 20px; /* Padding inside the content box */
+    border-radius: 15px; /* Rounded corners */
+    background: #ffffff; /* White background */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Subtle shadow for a 3D effect */
+}
+
+.wrapper .input-field {
+    position: absolute; /* Positioned outside the normal document flow */
+    opacity: 0; /* Make the element invisible */
+    z-index: -99; /* Place the element behind other elements */
+}
+
+.content-box .content {
+    margin-top: 20px; /* Top margin */
+    display: flex; /* Flexbox for layout */
+    padding: 15px 0; /* Vertical padding */
+    flex-wrap: wrap; /* Wrap items onto multiple lines if necessary */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute items evenly with space between */
+}
+
+.content-box .result-details {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute items evenly with space between */
+    width: calc(100% - 140px); /* Adjust the width based on the total available space */
+}
+
+.result-details li {
+    display: flex; /* Flexbox for layout */
+    height: 25px; /* Set the height */
+    list-style: none; /* Remove default list styling */
+    align-items: center; /* Center items vertically */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+}
+
+.content button {
+    width: 120px; /* Set the width of the button */
+    outline: none; /* Remove default outline */
+    border: none; /* Remove border */
+    color: #fff; /* Text color */
+    background: #04034d; /* Button background color */
+    padding: 10px 0; /* Vertical padding */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, background 0.3s ease; /* Smooth transition for transform and background */
+}
+
+.content button:hover {
+    background: #0A50A0; /* Change background color on hover */
+}
+
+.content button:active {
+    transform: scale(0.97); /* Slightly shrink button on click */
+}
+
+.typing-text p span {
+    position: relative; /* Position relative to its normal position */
+    font-size: 18px; /* Font size */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.typing-text p span.active {
+    color: #FFA500; /* Text color when active */
+}
+
+.typing-text p span.correct {
+    color: #008000; /* Text color when correct */
+}
+
+.typing-text p span.incorrect {
+    color: #FF0000; /* Text color when incorrect */
+    outline: 1px solid #fff; /* Outline around incorrect text */
+    background: #ffc0cb; /* Background color for incorrect text */
+    border-radius: 4px; /* Rounded corners for incorrect text */
+}
+
+::selection {
+    color: #fff; /* Text color when selected */
+    background: #FFA500; /* Background color when selected */
+}
